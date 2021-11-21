@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maeno-backend
+  labels:
+    role: maeno-backend-webserver
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: maeno-backend-webserver
+  template:
+    metadata:
+      labels:
+        role: webserver
+    spec:
+      containers:
+      - name: backendserver
+        image: kshithija/itwontwok:v1.0.0

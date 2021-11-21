@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: maeno-frontend
+  labels:
+    role: webserver
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: maeno-frontend-webserver
+  template:
+    metadata:
+      labels:
+        role: maeno-frontend-webserver
+    spec:
+      containers:
+      - name: webserver
+        image: kshithija/maeno-fe:v1.0.0

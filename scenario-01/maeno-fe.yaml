@@ -3,12 +3,13 @@ kind: Pod
 metadata:
   creationTimestamp: null
   labels:
-    run: maeno-backend
-  name: maeno-backend
+    run: maeno-frontend
+  name: maeno-frontend
+  namespace: scn-01
 spec:
   containers:
   - image: kshithija/maeno-fe:v1.0.0
-    name: maeno-backend
+    name: maeno-frontend
     resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always

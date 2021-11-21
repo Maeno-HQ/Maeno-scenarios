@@ -5,6 +5,7 @@ metadata:
   labels:
     run: maeno-backend
   name: maeno-backend
+  namespace: scn-01
 spec:
   containers:
   - image: kshithija/maeno-be:v1.0.0
